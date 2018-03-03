@@ -78,7 +78,7 @@
                 cb.addEventListener('change', event => {
                     let othersChecked = checkboxes.filter(c => c.checked && c !== event.target);
                     if (othersChecked.length === 2) {
-                        othersChecked[(Math.random() < 0.5 ? 0 : 1)].checked = false;
+                        othersChecked[Math.round(Math.random())].checked = false;
                     }
                 });
             });
