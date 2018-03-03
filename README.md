@@ -9,7 +9,7 @@ E.g. when it comes to the software, you always have to choose two out of:
 If something is _fast_ and _cheap_ at the same time, it just cannot be _good_ and so on and so forth.
 
 ## Usage
-Provide someone the URL `https://mat3e.github.io/pick2?first=fast&second=cheap&third=good` where `first`, `second` and `third` values can be modified. 
+Provide someone the URL [`https://mat3e.github.io/pick2?first=fast&second=cheap&third=good`](https://mat3e.github.io/pick2?first=fast&second=cheap&third=good) where `first`, `second` and `third` values can be modified. 
 
 You can also use the `title` parameter to change 'Pick two' into something else.
 
