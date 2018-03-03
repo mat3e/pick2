@@ -11,35 +11,52 @@
     <title>Pick Two</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox/dist/pretty-checkbox.min.css">
+    <style>
+        article {
+            max-width: 25%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Pick two</h1>
+    <article>
+        <h1 id="title">Pick two</h1>
 
-    <p>
-        <div class="pretty p-switch p-fill">
-            <input type="checkbox" />
-            <div class="state">
-                <label id="first">First</label>
+        <p>
+            <div class="pretty p-switch p-fill">
+                <input type="checkbox" />
+                <div class="state">
+                    <label id="first">First</label>
+                </div>
             </div>
-        </div>
-    </p>
-    <p>
-        <div class="pretty p-switch p-fill">
-            <input type="checkbox" />
-            <div class="state">
-                <label id="second">Second</label>
+        </p>
+        <p>
+            <div class="pretty p-switch p-fill">
+                <input type="checkbox" />
+                <div class="state">
+                    <label id="second">Second</label>
+                </div>
             </div>
-        </div>
-    </p>
-    <p>
-        <div class="pretty p-switch p-fill">
-            <input type="checkbox" />
-            <div class="state">
-                <label id="third">Third</label>
+        </p>
+        <p>
+            <div class="pretty p-switch p-fill">
+                <input type="checkbox" />
+                <div class="state">
+                    <label id="third">Third</label>
+                </div>
             </div>
-        </div>
-    </p>
+        </p>
+    </article>
+
+    <a href="https://github.com/mat3e/pick2">
+        <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"
+            alt="Fork me on GitHub">
+    </a>
 
     <script>
         (function () {
@@ -53,6 +70,7 @@
                         if (elem) {
                             elem.textContent = decodeURIComponent(value.replace(/\+/g, ' '));
                         }
+                        // configurable title?
                     });
             }
 
