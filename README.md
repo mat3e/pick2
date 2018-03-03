@@ -13,10 +13,10 @@ Provide someone the URL `https://mat3e.github.io/pick2?first=fast&second=cheap&t
 
 You can also use the `title` parameter to change 'Pick two' into something else.
 
-**Protip:** use `'+'` instead of whitespaces.
+**Protip:** use `+` instead of whitespaces.
 
 ## Libraries
 - [pretty checkbox](https://lokesh-coder.github.io/pretty-checkbox/)
 
 ## (possible) Follow-ups
-- custom switch web component (would like to create this, because it took to much time to find sth)
+- custom switch web component (I'd like to create one, because it took me too much time to find something small and nice)
