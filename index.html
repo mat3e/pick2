@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Pick two out of three">
+    <meta name="keywords" content="pick,two,three,generator,online,JavaScript,JS">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="author" content="mat3e">
+
+    <title>Pick Two</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox/dist/pretty-checkbox.min.css">
+</head>
+
+<body>
+    <h1>Pick two</h1>
+
+    <p>
+        <div class="pretty p-switch p-fill">
+            <input type="checkbox" />
+            <div class="state">
+                <label id="first">First</label>
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="pretty p-switch p-fill">
+            <input type="checkbox" />
+            <div class="state">
+                <label id="second">Second</label>
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="pretty p-switch p-fill">
+            <input type="checkbox" />
+            <div class="state">
+                <label id="third">Third</label>
+            </div>
+        </div>
+    </p>
+
+    <script>
+        (function () {
+            let qParamStart = location.href.indexOf('?');
+            if (qParamStart !== -1) {
+                let params = location.href.substring(qParamStart + 1)
+                    .split('&')
+                    .forEach(param => {
+                        let [key, value] = param.split('=');
+                        let elem = document.querySelector(`#${key}`);
+                        if (elem) {
+                            elem.textContent = decodeURIComponent(value.replace(/\+/g, ' '));
+                        }
+                    });
+            }
+
+            let checkboxes = [...document.querySelectorAll('input')];
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', event => {
+                    let othersChecked = checkboxes.filter(c => c.checked && c !== event.target);
+                    if (othersChecked.length === 2) {
+                        othersChecked[(Math.random() < 0.5 ? 0 : 1)].checked = false;
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
